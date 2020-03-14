@@ -1,0 +1,50 @@
+$colorPrincipal: #2c69da;
+$colorText: #808080;
+$colorInactiveBorder: #f9cce6;
+$roboto: "Roboto", sans-serif;
+
+body {
+  margin: 30px 30px;
+  padding: 0;
+  font-family: $roboto;
+}
+
+p {
+  margin: 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &--title {
+  }
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &--items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+
+    p {
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 2px solid $colorInactiveBorder;
+    }
+
+    p:hover {
+      border-bottom: 4px solid $colorPrincipal;
+    }
+  }
+
+  &--userName {
+    margin: auto 0px auto auto;
+    color: $colorText;
+    font-size: 20px;
+  }
+}

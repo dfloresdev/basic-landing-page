@@ -1,7 +1,8 @@
-$colorPrincipal: #2c69da;
+$colorPrincipal: #cd7cf2;
 $colorText: #808080;
 $colorInactiveBorder: #f9cce6;
 $roboto: "Roboto", sans-serif;
+$colorHighlighted: black;
 
 body {
   margin: 30px 30px;
@@ -9,16 +10,9 @@ body {
   font-family: $roboto;
 }
 
-p {
+p,
+h1 {
   margin: 0;
-}
-
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  &--title {
-  }
 }
 
 .menu {
@@ -46,5 +40,31 @@ p {
     margin: auto 0px auto auto;
     color: $colorText;
     font-size: 20px;
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: $colorText;
+  align-items: center;
+
+  .highlighted {
+    color: $colorHighlighted;
+  }
+
+  &--title {
+    font-size: 35px;
+  }
+
+  &--button {
+    margin-top: 15px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 15px 50px;
+    border-radius: 10px;
+    font-weight: 600;
+    background: $colorPrincipal;
   }
 }

@@ -48,6 +48,26 @@ h1 {
   grid-template-columns: 1fr 1fr;
   color: $colorText;
   align-items: center;
+  grid-template-areas: "textZone imageZone";
+
+  @media only screen and (max-width: 992px) {
+    .hero--title {
+      font-size: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+  }
+
+  @media only screen and (max-width: 600px) {
+    .hero--title {
+      font-size: 20px;
+      text-align: center;
+    }
+    grid-template-areas:
+      "textZone textZone"
+      "imageZone imageZone";
+  }
 
   .highlighted {
     color: $colorHighlighted;
@@ -55,6 +75,7 @@ h1 {
 
   &--title {
     font-size: 35px;
+    grid-area: textZone;
   }
 
   &--button {
@@ -71,6 +92,14 @@ h1 {
   &--textHighligh {
     color: $colorPrincipal;
     font-weight: 600;
+  }
+
+  &--image {
+    text-align: center;
+    grid-area: imageZone;
+    &__size {
+      width: 100%;
+    }
   }
 }
 

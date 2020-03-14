@@ -67,4 +67,16 @@ h1 {
     font-weight: 600;
     background: $colorPrincipal;
   }
+
+  &--textHighligh {
+    color: $colorPrincipal;
+    font-weight: 600;
+  }
+}
+
+.footer {
+  color: $colorText;
+  p {
+    text-align: center;
+  }
 }

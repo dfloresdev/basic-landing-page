@@ -14,25 +14,65 @@ p,
 h1 {
   margin: 0;
 }
-
+// que es lo que les hubiera gustado que les dijeran cuando iniciaron su profesional
 .menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  label {
+    display: none;
+    font-size: 20px;
+    color: $colorText;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    label {
+      display: block;
+    }
+    .menu--items {
+      display: none;
+      position: absolute;
+      margin: 26px 0 26px -30px;
+      background-color: white;
+      width: 100%;
+      box-shadow: 0px 12px 19px -10px #cd7cf2;
+
+      p {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+      p:hover {
+        border-bottom: 2px solid $colorInactiveBorder;
+      }
+    }
+
+    #toggle:checked + .menu--items {
+      display: block;
+    }
+  }
+
+  #toggle {
+    display: none;
+  }
 
   &--items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
 
-    p {
+    a {
       width: 100%;
       text-align: center;
       padding: 15px 0;
       border-bottom: 2px solid $colorInactiveBorder;
+      text-decoration: none;
+      color: black;
     }
 
-    p:hover {
+    a:hover {
       border-bottom: 4px solid $colorPrincipal;
+      color: $colorPrincipal;
     }
   }
 
@@ -54,9 +94,6 @@ h1 {
     .hero--title {
       font-size: 25px;
     }
-  }
-
-  @media only screen and (max-width: 768px) {
   }
 
   @media only screen and (max-width: 600px) {
